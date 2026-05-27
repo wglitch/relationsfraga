@@ -1,0 +1,22 @@
+body{
+margin:0;min-height:100vh;display:grid;place-items:center;background:#111;font-family:Georgia,serif;
+}
+.card{
+position:relative;width:min(92vw,430px);aspect-ratio:431/640;border:0;padding:0;background:none;
+overflow:hidden;border-radius:4px;box-shadow:0 20px 40px rgba(0,0,0,.45);cursor:pointer;
+}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.text{
+position:absolute;inset:20px 18px 27% 18px;display:flex;align-items:center;justify-content:center;
+text-align:center;font-size:clamp(24px,5vw,38px);line-height:1.1;color:#111;
+text-shadow:0 1px 2px rgba(255,255,255,.55);white-space:pre-wrap;pointer-events:none;
+}
+.zone{position:absolute;bottom:0;width:50%;height:25%;}
+.zone-a{left:0;}
+.zone-b{right:0;}
+.switching{animation:switch .22s ease-in-out;}
+@keyframes switch{
+0%{transform:scaleX(1)}
+50%{transform:scaleX(.06)}
+100%{transform:scaleX(1)}
+}
